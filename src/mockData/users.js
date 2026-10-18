@@ -1,0 +1,73 @@
+/**
+ * Mock Users Data
+ * Used for UI development in Phase 1
+ */
+
+export const mockUsers = [
+  {
+    id: 'USR001',
+    name: 'John Smith',
+    email: 'john.smith@email.com',
+    phone: '+1-212-555-0001',
+    status: 'Active',
+    registrationDate: '2023-06-15',
+    totalRentals: 5,
+    role: 'Buyer',
+    sellerApproved: false,
+  },
+  {
+    id: 'USR002',
+    name: 'Jane Doe',
+    email: 'jane.doe@email.com',
+    phone: '+1-212-555-0002',
+    status: 'Active',
+    registrationDate: '2023-07-20',
+    totalRentals: 3,
+    role: 'Seller',
+    sellerApproved: false,
+  },
+  {
+    id: 'USR003',
+    name: 'Mike Johnson',
+    email: 'mike.johnson@email.com',
+    phone: '+1-212-555-0003',
+    status: 'Active',
+    registrationDate: '2023-08-10',
+    totalRentals: 7,
+    role: 'Seller',
+    sellerApproved: true,
+  },
+  {
+    id: 'USR004',
+    name: 'Sarah Williams',
+    email: 'sarah.williams@email.com',
+    phone: '+1-212-555-0004',
+    status: 'Blocked',
+    registrationDate: '2023-09-05',
+    totalRentals: 2,
+    role: 'Buyer',
+    sellerApproved: false,
+  },
+  {
+    id: 'USR005',
+    name: 'Robert Brown',
+    email: 'robert.brown@email.com',
+    phone: '+1-212-555-0005',
+    status: 'Active',
+    registrationDate: '2023-10-12',
+    totalRentals: 4,
+    role: 'Seller',
+    sellerApproved: false,
+  },
+  {
+    id: 'USR006',
+    name: 'Linda Martinez',
+    email: 'linda.martinez@email.com',
+    phone: '+1-212-555-0006',
+    status: 'Active',
+    registrationDate: '2023-11-01',
+    totalRentals: 1,
+    role: 'Buyer',
+    sellerApproved: false,
+  },
+]
