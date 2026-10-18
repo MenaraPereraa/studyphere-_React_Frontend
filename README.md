@@ -1,270 +1,249 @@
-# CoreUI Free React Admin Template - Built for AI-Assisted Development [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&logo=twitter)](https://twitter.com/intent/tweet?text=CoreUI%20-%20Free%React%204%20Admin%20Template%20&url=https://coreui.io&hashtags=bootstrap,admin,template,dashboard,panel,free,angular,react,vue)
+# StudySphere Web
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://opensource.org/licenses/MIT)
-[![@coreui coreui](https://img.shields.io/badge/@coreui%20-coreui-lightgrey.svg?style=flat-square)](https://github.com/coreui/coreui)
-[![npm package][npm-coreui-badge]][npm-coreui]
-[![NPM downloads][npm-coreui-download]][npm-coreui]
-[![@coreui react](https://img.shields.io/badge/@coreui%20-react-lightgrey.svg?style=flat-square)](https://github.com/coreui/react)
-[![npm package][npm-coreui-react-badge]][npm-coreui-react]
-[![NPM downloads][npm-coreui-react-download]][npm-coreui-react]  
+A browser-based Admin Panel and Seller Dashboard built with Next.js for the StudySphere platform — a location-aware campus m-commerce ecosystem where students can buy, sell, and exchange academic resources. This web application gives administrators full control over the platform and provides registered sellers with a dedicated space to manage listings, track orders, and view revenue analytics from any device.
 
-[npm-coreui]: https://www.npmjs.com/package/@coreui/coreui
-[npm-coreui-badge]: https://img.shields.io/npm/v/@coreui/coreui.png?style=flat-square
-[npm-coreui-download]: https://img.shields.io/npm/dm/@coreui/coreui.svg?style=flat-square
-[npm-coreui-react]: https://www.npmjs.com/package/@coreui/react
-[npm-coreui-react-badge]: https://img.shields.io/npm/v/@coreui/react.png?style=flat-square
-[npm-coreui-react-download]: https://img.shields.io/npm/dm/@coreui/react.svg?style=flat-square
-[npm]: https://www.npmjs.com/package/@coreui/react
+> **Note:** This web application communicates with the StudySphere Backend API and Firebase Firestore directly from the browser. Environment variables prefixed with `NEXT_PUBLIC_` are exposed to the client bundle. Do not place sensitive server-side secrets in `NEXT_PUBLIC_` variables. If you choose to extend this application with sensitive business logic, consider moving it to Next.js API Routes or the dedicated backend service.
 
-[![Bootstrap Admin Template](https://assets.coreui.io/products/coreui-free-bootstrap-admin-template-light-dark.webp)](https://coreui.io/product/free-react-admin-template/)
+## Features
 
-CoreUI is meant to be the UX game changer. Pure & transparent code is devoid of redundant components, so the app is light enough to offer ultimate user experience. This means mobile devices also, where the navigation is just as easy and intuitive as on a desktop or laptop. The CoreUI Layout API lets you customize your project for almost any device – be it Mobile, Web or WebApp – CoreUI covers them all!
+- **Admin Dashboard**: Platform-wide KPIs, revenue charts, user activity feed, and real-time listing statistics
+- **User Management**: View, verify, suspend, or permanently delete student and seller accounts
+- **Listings Moderation**: Approve, reject, or flag marketplace listings submitted from the Android app
+- **Order Tracking**: Monitor all platform orders, update statuses, and resolve buyer–seller disputes
+- **Financial Reports**: Revenue breakdown by date range, PayHere transaction logs, and CSV export
+- **Category Manager**: Create, edit, and delete product categories that appear in the Android app
+- **Platform Settings**: Configure platform fees, featured listing rules, and notification templates
+- **Seller Overview**: Personal revenue summary, active listing count, and incoming order snapshot
+- **My Listings**: Create, edit, and delete individual academic resource listings
+- **My Orders**: View and manage incoming orders and update fulfilment status per order
+- **Seller Analytics**: Per-listing views, enquiries, and sales performance charts
+- **Seller Profile**: Edit public profile information and manage payout and bank account details
+- **Authentication**: Email/Password and Google Sign-In via NextAuth.js and Firebase Authentication
+- **Dark / Light Theme**: System-default adaptive theme with manual toggle support
+- **Responsive Design**: Fully responsive layout optimized for desktop, tablet, and mobile browsers
 
-## Table of Contents
+## Tech Stack
 
-* [Versions](#versions)
-* [CoreUI PRO](#coreui-pro)
-* [CoreUI PRO React Admin Templates](#coreui-pro-react-admin-templates)
-* [Quick Start](#quick-start)
-* [Installation](#installation)
-* [Basic usage](#basic-usage)
-* [What's included](#whats-included)
-* [AI-Friendly Development](#ai-friendly-development)
-* [Documentation](#documentation)
-* [Components](#components)
-* [Versioning](#versioning)
-* [Creators](#creators)
-* [Community](#community)
-* [Support CoreUI Development](#support-coreui-development)
-* [Copyright and License](#copyright-and-license)
+- **Framework**: Next.js 14 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **UI Components**: shadcn/ui + Radix UI primitives
+- **Charts**: Recharts
+- **Icons**: Lucide React
+- **Forms**: react-hook-form + Zod validation
+- **Authentication**: NextAuth.js + Firebase Authentication
+- **Cloud Backend**: Firebase Firestore (real-time data reads)
+- **HTTP Client**: Axios
+- **State Management**: React Context API + React Hooks
+- **Data Fetching**: SWR (stale-while-revalidate)
+- **Notifications**: react-hot-toast
+- **Date Handling**: date-fns
+- **Build Tool**: Next.js built-in compiler (Turbopack in dev)
 
-## Versions
+## Getting Started
 
-* [CoreUI Free Bootstrap Admin Template](https://github.com/coreui/coreui-free-bootstrap-admin-template)
-* [CoreUI Free Angular Admin Template](https://github.com/coreui/coreui-free-angular-admin-template)
-* [CoreUI Free React.js Admin Template (Vite)](https://github.com/coreui/coreui-free-react-admin-template)
-* [CoreUI Free React.js Admin Template (Create React App)](https://github.com/coreui/coreui-free-react-admin-template-cra)
-* [CoreUI Free Vue.js Admin Template](https://github.com/coreui/coreui-free-vue-admin-template)
+### Prerequisites
 
-## CoreUI PRO
-
-* 💪  [CoreUI PRO Angular Admin Template](https://coreui.io/product/angular-dashboard-template/)
-* 💪  [CoreUI PRO Bootstrap Admin Template](https://coreui.io/product/bootstrap-dashboard-template/)
-* 💪  [CoreUI PRO Next.js Admin Template](https://coreui.io/product/next-js-dashboard-template/)
-* 💪  [CoreUI PRO React Admin Template](https://coreui.io/product/react-dashboard-template/)
-* 💪  [CoreUI PRO Vue Admin Template](https://coreui.io/product/vue-dashboard-template/)
-
-## CoreUI PRO React Admin Templates
-
-| Default Theme | Light Theme |
-| --- | --- |
-| [![CoreUI PRO React Admin Template](https://coreui.io/images/templates/coreui_pro_default_light_dark.webp)](https://coreui.io/product/react-dashboard-template/?theme=default) | [![CoreUI PRO React Admin Template](https://coreui.io/images/templates/coreui_pro_light_light_dark.webp)](https://coreui.io/product/react-dashboard-template/?theme=light)|
-
-| Modern Theme | Bright Theme |
-| --- | --- |
-| [![CoreUI PRO React Admin Template](https://coreui.io/images/templates/coreui_pro_default_v3_light_dark.webp)](https://coreui.io/product/react-dashboard-template/?theme=modern) | [![CoreUI PRO React Admin Template](https://coreui.io/images/templates/coreui_pro_light_v3_light_dark.webp)](https://coreui.io/product/react-dashboard-template/?theme=bright)|
-
-## Quick Start
-
-- [Download the latest release](https://github.com/coreui/coreui-free-react-admin-template/archive/refs/heads/main.zip)
-- Clone the repo: `git clone https://github.com/coreui/coreui-free-react-admin-template.git`
+- Node.js (v18 or later)
+- npm or yarn
+- Git
+- Firebase account for Authentication and Firestore ([Firebase Console](https://console.firebase.google.com/))
+- A running instance of the [StudySphere Backend API](https://github.com/MenaraPereraa/StudySphere-Backend) (local or deployed)
+- `google-services` web config values from your Firebase project
 
 ### Installation
 
-``` bash
-$ npm install
+1. Clone the repository:
+   ```
+   git clone https://github.com/MenaraPereraa/StudySphere-Web.git
+   cd StudySphere-Web
+   ```
+
+2. Install dependencies:
+   ```
+   npm install
+   # or
+   yarn
+   ```
+
+3. Set up environment variables:
+   Copy the example environment file and fill in your values:
+   ```
+   cp .env.example .env.local
+   ```
+
+4. Run the development server:
+   ```
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+5. Open [http://localhost:3000](http://localhost:3000) in your browser to see the application.
+
+### Setting up Firebase
+
+1. Go to the [Firebase Console](https://console.firebase.google.com/)
+2. Open your existing StudySphere project or create a new one
+3. Navigate to **Project Settings → General → Your apps** and register a Web app
+4. Copy the Firebase config object values into your `.env.local` file (see [Environment Variables](#setting-up-environment-variables) below)
+5. Ensure **Email/Password** and **Google** sign-in are enabled under **Authentication → Sign-in method**
+6. Ensure your Firestore security rules allow authenticated reads from the browser:
+   ```
+   rules_version = '2';
+   service cloud.firestore {
+     match /databases/{database}/documents {
+       match /users/{userId}/{document=**} {
+         allow read, write: if request.auth != null && request.auth.uid == userId;
+       }
+       match /{collection}/{document=**} {
+         allow read: if request.auth != null;
+       }
+     }
+   }
+   ```
+
+### Setting up Environment Variables
+
+1. Open the `.env.local` file created during installation
+2. Replace each placeholder with your actual values:
+   ```
+   # Firebase Client SDK (safe to expose — prefixed with NEXT_PUBLIC_)
+   NEXT_PUBLIC_FIREBASE_API_KEY="your_firebase_api_key"
+   NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN="your_project.firebaseapp.com"
+   NEXT_PUBLIC_FIREBASE_PROJECT_ID="your_firebase_project_id"
+   NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET="your_project.appspot.com"
+   NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID="your_sender_id"
+   NEXT_PUBLIC_FIREBASE_APP_ID="your_firebase_app_id"
+
+   # Backend API
+   NEXT_PUBLIC_API_BASE_URL="http://localhost:5000/api"
+
+   # NextAuth.js (server-side only — do NOT prefix with NEXT_PUBLIC_)
+   NEXTAUTH_SECRET="your_nextauth_secret"
+   NEXTAUTH_URL="http://localhost:3000"
+   ```
+3. Restart the development server after updating `.env.local`
+
+## Project Structure
+
 ```
-
-or
-
-``` bash
-$ yarn install
-```
-
-### Basic usage
-
-``` bash
-# dev server with hot reload at http://localhost:3000
-$ npm start 
-```
-
-or 
-
-``` bash
-# dev server with hot reload at http://localhost:3000
-$ yarn start
-```
-
-Navigate to [http://localhost:3000](http://localhost:3000). The app will automatically reload if you change any of the source files.
-
-#### Build
-
-Run `build` to build the project. The build artifacts will be stored in the `build/` directory.
-
-```bash
-# build for production with minification
-$ npm run build
-```
-
-or
-
-```bash
-# build for production with minification
-$ yarn build
-```
-
-## What's included
-
-Within the download you'll find the following directories and files, logically grouping common assets and providing both compiled and minified variations. You'll see something like this:
-
-```
-coreui-free-react-admin-template
-├── public/          # static files
+StudySphere-Web/
+├── public/                       # Static files served as-is
 │   ├── favicon.ico
+│   ├── logo.png
 │   └── manifest.json
 │
-├── src/             # project root
-│   ├── assets/      # images, icons, etc.
-│   ├── components/  # common components - header, footer, sidebar, etc.
-│   ├── layouts/     # layout containers
-│   ├── scss/        # scss styles
-│   ├── views/       # application views
-│   ├── _nav.js      # sidebar navigation config
-│   ├── App.js
-│   ├── index.js
-│   ├── routes.js    # routes config
-│   └── store.js     # template state example 
+├── src/                          # Project root
+│   ├── app/                      # Next.js App Router
+│   │   ├── (admin)/              # Admin-only routes (role-protected layout)
+│   │   │   ├── dashboard/        # Platform overview and analytics
+│   │   │   ├── users/            # User management (students, sellers)
+│   │   │   ├── listings/         # All marketplace listings moderation
+│   │   │   ├── orders/           # Order management and status tracking
+│   │   │   ├── reports/          # Financial and usage reports
+│   │   │   ├── categories/       # Product category management
+│   │   │   └── settings/         # Platform-wide configuration
+│   │   ├── (seller)/             # Seller-only routes (role-protected layout)
+│   │   │   ├── overview/         # Seller revenue and activity summary
+│   │   │   ├── my-listings/      # Seller's own listing management
+│   │   │   ├── my-orders/        # Incoming orders and fulfilment
+│   │   │   ├── analytics/        # Individual seller performance charts
+│   │   │   └── profile/          # Seller profile and payout settings
+│   │   ├── auth/                 # Authentication pages
+│   │   │   ├── login/
+│   │   │   ├── register/
+│   │   │   └── forgot-password/
+│   │   ├── api/                  # Next.js API Routes (server-side)
+│   │   │   └── auth/             # NextAuth.js handler
+│   │   ├── layout.tsx            # Root layout with providers
+│   │   └── page.tsx              # Landing / role-based redirect page
+│   │
+│   ├── components/               # Reusable UI components
+│   │   ├── charts/               # Recharts wrappers for dashboard graphs
+│   │   ├── tables/               # Data table components with sorting and filters
+│   │   ├── forms/                # Form components using react-hook-form
+│   │   ├── modals/               # Dialog and confirmation modal components
+│   │   └── ui/                   # Base UI primitives (shadcn/ui overrides)
+│   │
+│   ├── lib/                      # Utility libraries and helpers
+│   │   ├── firebase.ts           # Firebase client SDK initialization
+│   │   ├── api.ts                # Axios instance with auth header injection
+│   │   └── auth.ts               # NextAuth.js configuration and providers
+│   │
+│   ├── hooks/                    # Custom React hooks
+│   │   ├── useAuth.ts            # Access current user and role from context
+│   │   ├── useListings.ts        # SWR hook for fetching listings
+│   │   └── useOrders.ts          # SWR hook for fetching orders
+│   │
+│   ├── context/                  # React Context providers
+│   │   ├── AuthContext.tsx       # Authenticated user and role state
+│   │   └── ThemeContext.tsx      # Dark / light theme toggle state
+│   │
+│   ├── types/                    # TypeScript interfaces and types
+│   │   ├── user.types.ts
+│   │   ├── listing.types.ts
+│   │   ├── order.types.ts
+│   │   └── api.types.ts
+│   │
+│   └── styles/                   # Global CSS and Tailwind base styles
+│       └── globals.css
 │
-├── index.html       # html template
-├── ...
+├── .env.example                  # Environment variable template (safe to commit)
+├── .env.local                    # Local environment values (DO NOT commit)
+├── .gitignore
+├── next.config.ts                # Next.js configuration
+├── tailwind.config.ts            # Tailwind CSS configuration
+├── tsconfig.json
 ├── package.json
-├── ...
-└── vite.config.mjs  # vite config
+└── README.md
 ```
 
-## AI-Friendly Development
+## API Integration
 
-This template is optimized for AI-assisted development with comprehensive context files and documentation:
+This web application communicates with the StudySphere Backend API for all data operations. The API base URL is configured via the `NEXT_PUBLIC_API_BASE_URL` environment variable. The following resource modules are consumed:
 
-### Context Files
-- **`.cursorrules`** - Comprehensive AI context file with project conventions, patterns, and guidelines for working with React, CoreUI, and the template architecture
-- **`ARCHITECTURE.md`** - Detailed technical documentation covering the project structure, component hierarchy, routing system, state management, and build pipeline
-- **`DEVELOPMENT.md`** - Practical developer guide with setup instructions, development workflows, code examples, and best practices
+- **Auth** — Token verification, session handling, and role resolution via NextAuth.js
+- **Users** — Fetch, update, and manage user accounts and roles (admin only)
+- **Listings** — Read all listings for moderation, or own listings for seller management
+- **Orders** — Retrieve and update order records and fulfilment statuses
+- **Payments** — Fetch verified PayHere transaction records for financial reports
+- **Categories** — Read and manage product categories for the Android app catalog
+- **Reports** — Pull aggregated revenue and usage statistics for the admin dashboard
 
-### Code Documentation
-- All React components include detailed JSDoc comments with parameter types and descriptions
-- Inline documentation explaining complex logic and patterns
-- PropTypes definitions for runtime type checking
+You can find the complete Axios instance configuration and request helpers in `src/lib/api.ts`. All API responses follow the standardised envelope format defined in `src/types/api.types.ts`.
 
-### Benefits for AI Coding Assistants
+## Customization
 
-When using AI coding assistants like Cursor, Claude Code, or GitHub Copilot, these context files help the AI to:
+- **Theme**: Primary and accent colors can be changed in `tailwind.config.ts` under the `extend.colors` key; dark mode overrides use Tailwind's `dark:` variant throughout components
+- **Sidebar Navigation**: Add or remove menu items by editing the navigation config array in `src/components/ui/Sidebar.tsx`
+- **Role Guards**: Access control rules per route are defined in the middleware file `src/middleware.ts` using NextAuth session roles
+- **Chart Colors**: Default chart color palettes can be adjusted in `src/components/charts/chartConfig.ts`
+- **API Base URL**: Switch between local and production API by updating `NEXT_PUBLIC_API_BASE_URL` in `.env.local`
+- **Date Format**: Default date and time display formats can be changed globally in `src/lib/dateFormat.ts` using date-fns format strings
 
-- **Understand the Stack**: Recognize that this is a React 19 application using CoreUI React components (not Tailwind CSS or other frameworks)
-- **Follow Patterns**: Generate code that matches the project's component structure and conventions
-- **Use Correct Components**: Suggest appropriate CoreUI React components from `@coreui/react`
-- **Maintain Code Style**: Follow ESLint and Prettier rules automatically
-- **Respect Architecture**: Work within the established routing, state management, and styling patterns
+## Deployment
 
-Simply open the project in your AI-enabled IDE, and the assistant will automatically have context about the React architecture, CoreUI React component usage, development workflows, and coding standards.
+This application can be easily deployed to Vercel with zero configuration:
 
-## Documentation
+1. Push your code to a GitHub repository
+2. Go to [Vercel](https://vercel.com/) and click **Add New → Project**
+3. Import the `StudySphere-Web` repository from GitHub
+4. Add all environment variables from `.env.local` in the **Environment Variables** section of the Vercel project settings
+5. Click **Deploy** — Vercel will automatically build and publish the application
 
-The documentation for the CoreUI Admin Template is hosted at our website [CoreUI for React](https://coreui.io/react/docs/templates/installation/)
+For manual builds outside of Vercel:
 
-## Components
+```
+# build for production
+npm run build
 
-CoreUI React.js Admin Templates are built on top of CoreUI and CoreUI PRO UI components libraries, including all of these components.
+# start the production server
+npm run start
+```
 
-- [React Accordion](https://coreui.io/react/docs/components/accordion/)
-- [React Alert](https://coreui.io/react/docs/components/alert/)
-- [React Autocomplete](https://coreui.io/react/docs/forms/autocomplete/) **PRO**
-- [React Avatar](https://coreui.io/react/docs/components/avatar/)
-- [React Badge](https://coreui.io/react/docs/components/badge/)
-- [React Breadcrumb](https://coreui.io/react/docs/components/breadcrumb/)
-- [React Button](https://coreui.io/react/docs/components/button/)
-- [React Button Group](https://coreui.io/react/docs/components/button-group/)
-- [React Callout](https://coreui.io/react/docs/components/callout/)
-- [React Card](https://coreui.io/react/docs/components/card/)
-- [React Carousel](https://coreui.io/react/docs/components/carousel/)
-- [React Checkbox](https://coreui.io/react/docs/forms/checkbox/)
-- [React Close Button](https://coreui.io/react/docs/components/close-button/)
-- [React Collapse](https://coreui.io/react/docs/components/collapse/)
-- [React Date Picker](https://coreui.io/react/docs/forms/date-picker/) **PRO**
-- [React Date Range Picker](https://coreui.io/react/docs/forms/date-range-picker/) **PRO**
-- [React Dropdown](https://coreui.io/react/docs/components/dropdown/)
-- [React Floating Labels](https://coreui.io/react/docs/forms/floating-labels/)
-- [React Footer](https://coreui.io/react/docs/components/footer/)
-- [React Header](https://coreui.io/react/docs/components/header/)
-- [React Image](https://coreui.io/react/docs/components/image/)
-- [React Input](https://coreui.io/react/docs/forms/input/)
-- [React Input Group](https://coreui.io/react/docs/forms/input-group/)
-- [React List Group](https://coreui.io/react/docs/components/list-group/)
-- [React Loading Button](https://coreui.io/react/docs/components/loading-button/) **PRO**
-- [React Modal](https://coreui.io/react/docs/components/modal/)
-- [React Multi Select](https://coreui.io/react/docs/forms/multi-select/) **PRO**
-- [React Navs & Tabs](https://coreui.io/react/docs/components/navs-tabs/)
-- [React Navbar](https://coreui.io/react/docs/components/navbar/)
-- [React Offcanvas](https://coreui.io/react/docs/components/offcanvas/)
-- [React One Time Password Input](https://coreui.io/react/docs/forms/one-time-password-input/) **PRO**
-- [React Pagination](https://coreui.io/react/docs/components/pagination/)
-- [React Password Input](https://coreui.io/react/docs/forms/password-input/) **PRO**
-- [React Placeholder](https://coreui.io/react/docs/components/placeholder/)
-- [React Popover](https://coreui.io/react/docs/components/popover/)
-- [React Progress](https://coreui.io/react/docs/components/progress/)
-- [React Radio](https://coreui.io/react/docs/forms/radio/)
-- [React Range](https://coreui.io/react/docs/forms/range/)
-- [React Range Slider](https://coreui.io/react/docs/forms/range-slider/) **PRO**
-- [React Rating](https://coreui.io/react/docs/forms/rating/)
-- [React Select](https://coreui.io/react/docs/forms/select/)
-- [React Sidebar](https://coreui.io/react/docs/components/sidebar/)
-- [React Smart Pagination](https://coreui.io/react/docs/components/smart-pagination/) **PRO**
-- [React Smart Table](https://coreui.io/react/docs/components/smart-table/) **PRO**
-- [React Spinner](https://coreui.io/react/docs/components/spinner/)
-- [React Stepper](https://coreui.io/react/docs/forms/stepper/) **PRO**
-- [React Switch](https://coreui.io/react/docs/forms/switch/)
-- [React Table](https://coreui.io/react/docs/components/table/)
-- [React Textarea](https://coreui.io/react/docs/forms/textarea/)
-- [React Time Picker](https://coreui.io/react/docs/forms/time-picker/) **PRO**
-- [React Toast](https://coreui.io/react/docs/components/toast/)
-- [React Tooltip](https://coreui.io/react/docs/components/tooltip/)
+The production build output will be stored in the `.next/` directory.
 
-## Versioning
+## License
 
-For transparency into our release cycle and in striving to maintain backward compatibility, CoreUI Free Admin Template is maintained under [the Semantic Versioning guidelines](http://semver.org/).
-
-See [the Releases section of our project](https://github.com/coreui/coreui-free-react-admin-template/releases) for changelogs for each release version.
-
-## Creators
-
-**Łukasz Holeczek**
-
-* <https://twitter.com/lukaszholeczek>
-* <https://github.com/mrholek>
-
-**Andrzej Kopański**
-
-* <https://github.com/xidedix>
-
-**CoreUI Team**
-
-* <https://twitter.com/core_ui>
-* <https://github.com/coreui>
-* <https://github.com/orgs/coreui/people>
-
-## Community
-
-Get updates on CoreUI's development and chat with the project maintainers and community members.
-
-- Follow [@core_ui on Twitter](https://twitter.com/core_ui).
-- Read and subscribe to [CoreUI Blog](https://coreui.ui/blog/).
-
-## Support CoreUI Development
-
-CoreUI is an MIT-licensed open source project and is completely free to use. However, the amount of effort needed to maintain and develop new features for the project is not sustainable without proper financial backing. You can support development by buying the [CoreUI PRO](https://coreui.io/pricing/?framework=react&src=github-coreui-free-react-admin-template) or by becoming a sponsor via [Open Collective](https://opencollective.com/coreui/).
-
-## Copyright and License
-
-copyright 2025 creativeLabs Łukasz Holeczek.   
-
-Code released under [the MIT license](https://github.com/coreui/coreui-free-react-admin-template/blob/main/LICENSE).
+[MIT License](LICENSE) - Free to use, modify, and distribute with attribution. Commercial use is permitted.
